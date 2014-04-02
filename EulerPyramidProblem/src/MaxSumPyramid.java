@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class MaxSumPyramid {
 	
 	public static void main(String[] args) throws IOException {
-		BufferedReader reader = new BufferedReader(new FileReader("tri.txt"));
+		BufferedReader reader = new BufferedReader(new FileReader("triangle.txt"));
 		
 		//pyramid is an arrayList where each row is represented by a String[]
 		ArrayList<String[]> pyramid = new ArrayList<String[]>();
