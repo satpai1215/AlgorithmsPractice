@@ -3,10 +3,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-
-
 public class MaxSumPyramid {
-	
 	
 	public static void main(String[] args) throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader("tri.txt"));
@@ -25,7 +22,7 @@ public class MaxSumPyramid {
 		
 		//1. Start at second to last row of pyramid (rowTop)
 		//2. For each num in rowTop, check left and right child in rowBottom, add max to self
-		//3. Delete last row
+		//3. Delete last row (not needed)
 		//4. Continue upward until you reach first row.
 		
 		int size = pyramid.size() - 1;
