@@ -26,14 +26,17 @@ public class MaxSumPyramid {
 		//4. Continue upward until you reach first row.
 		
 		int size = pyramid.size() - 1;
+		int parent, rightChild, leftChild;
+		String[] rowTop, rowBottom;
+		
 		for(int i = size; i > 0; i-- ) {
-			String[] rowTop = pyramid.get(i-1);
-			String[] rowBottom = pyramid.get(i);
+			rowTop = pyramid.get(i-1);
+			rowBottom = pyramid.get(i);
 			
 			for(int x = 0; x < rowTop.length ; x++) {
-				int parent = Integer.parseInt(rowTop[x]);
-				int leftChild = Integer.parseInt(rowBottom[x]); 
-				int rightChild = Integer.parseInt(rowBottom[x+1]);
+				parent = Integer.parseInt(rowTop[x]);
+				leftChild = Integer.parseInt(rowBottom[x]); 
+				rightChild = Integer.parseInt(rowBottom[x+1]);
 				
 				rowTop[x] = String.valueOf(parent + Math.max(leftChild, rightChild));
 			}
